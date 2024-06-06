@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillViewport="true">
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".Login">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/auto_union"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/login_email" />
+
+
+        <EditText
+            android:id="@+id/login_email"
+            style="@style/input"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:textColor="#000"
+            app:layout_constraintStart_toStartOf="@+id/container"
+            app:layout_constraintEnd_toEndOf="@+id/container"
+            app:layout_constraintBottom_toTopOf="@+id/login_password"/>
+
+        <EditText
+            android:id="@+id/login_password"
+            style="@style/input"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:textColor="#000"
+            app:layout_constraintStart_toStartOf="@+id/container"
+            app:layout_constraintEnd_toEndOf="@+id/container"
+            app:layout_constraintBottom_toTopOf="@+id/guideline"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/login_enter"
+            style="@style/button"
+            android:color="@color/red"
+            android:hint="@string/enter"
+            android:textColorHint="@color/white"
+            android:background="@drawable/red_button"
+            app:layout_constraintStart_toStartOf="@+id/container"
+            app:layout_constraintEnd_toEndOf="@+id/container"
+            app:layout_constraintTop_toBottomOf="@+id/guideline"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/login_create"
+            style="@style/button"
+            android:color="@color/red"
+            android:hint="@string/create_account"
+            android:textColorHint="@color/black"
+            android:background="@drawable/outline_button"
+            app:layout_constraintStart_toStartOf="@+id/container"
+            app:layout_constraintEnd_toEndOf="@+id/container"
+            app:layout_constraintTop_toBottomOf="@+id/login_enter"/>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="2dp"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/guideline"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/guideline"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

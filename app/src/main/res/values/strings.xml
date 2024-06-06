@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">AutoUnion</string>
+    <string name="google_map_api_key">AIzaSyAfvXhWPls2099OR4XbOrcpHL-iD8MQhq4</string>
+    <string name="email">Email</string>
+    <string name="password">Senha</string>
+    <string name="enter">Entrar</string>
+    <string name="create_account">Criar conta</string>
+    <string name="name">Nome</string>
+    <string name="find_photo">Adicionar CNH</string>
+    <string name="create">Criar</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="approve">Aprovar</string>
+    <string name="recuse">Recusar</string>
+    <string name="delete">Deletar usuário</string>
+</resources>

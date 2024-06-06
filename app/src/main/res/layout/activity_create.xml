@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillViewport="true">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".Create">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/create_back"
+            style="@style/button_dot"
+            android:drawableStart="@drawable/ic_back"
+            android:gravity="center"
+            app:iconGravity="textStart"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/auto_union"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <EditText
+            android:id="@+id/create_name"
+            style="@style/input"
+            android:hint="@string/name"
+            android:inputType="textEmailAddress"
+            android:layout_marginTop="120dp"
+            android:textColor="#000"
+            app:layout_constraintTop_toTopOf="@+id/logo"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/create_email"
+            style="@style/input"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:textColor="#000"
+            android:layout_marginTop="15dp"
+            app:layout_constraintTop_toBottomOf="@+id/create_name"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/create_password"
+            style="@style/input"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:textColor="#000"
+            android:layout_marginTop="15dp"
+            app:layout_constraintTop_toBottomOf="@+id/create_email"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/create_find_photo"
+            style="@style/button"
+            android:color="@color/red"
+            android:hint="@string/find_photo"
+            android:textColorHint="@color/black"
+            android:background="@drawable/outline_button"
+            app:layout_constraintTop_toBottomOf="@+id/create_password"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/create"
+            style="@style/button"
+            android:color="@color/red"
+            android:hint="@string/create"
+            android:layout_marginTop="10dp"
+            android:textColorHint="@color/white"
+            android:background="@drawable/red_button"
+            app:layout_constraintTop_toBottomOf="@+id/selected_image"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="2dp"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/guideline"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/guideline"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/selected_image"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_margin="16dp"
+            android:adjustViewBounds="true"
+            app:layout_constraintTop_toBottomOf="@+id/create_find_photo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

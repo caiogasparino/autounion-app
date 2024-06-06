@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Decision">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Decision">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/decision_back"
+            style="@style/button_dot"
+            android:drawableStart="@drawable/ic_back"
+            android:gravity="center"
+            app:iconGravity="textStart"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/decision_image"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_margin="16dp"
+            android:layout_marginTop="64dp"
+            android:layout_weight="0.5"
+            android:adjustViewBounds="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/decision_back" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/decision_approve"
+            style="@style/button"
+            android:hint="@string/approve"
+            android:textColorHint="@color/white"
+            android:background="@drawable/green_button"
+            app:layout_constraintStart_toStartOf="@+id/decision_image"
+            app:layout_constraintEnd_toEndOf="@+id/decision_image"
+            app:layout_constraintTop_toBottomOf="@+id/decision_image"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/decision_recuse"
+            style="@style/button"
+            android:color="@color/red"
+            android:hint="@string/recuse"
+            android:textColorHint="@color/black"
+            android:background="@drawable/outline_button"
+            app:layout_constraintStart_toStartOf="@+id/decision_image"
+            app:layout_constraintEnd_toEndOf="@+id/decision_image"
+            app:layout_constraintTop_toBottomOf="@+id/decision_approve"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
