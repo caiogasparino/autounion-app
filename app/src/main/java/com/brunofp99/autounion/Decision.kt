@@ -25,7 +25,7 @@ class Decision : AppCompatActivity() {
         val btnApprove = findViewById<AppCompatButton>(R.id.decision_approve)
         val btnRecuse = findViewById<AppCompatButton>(R.id.decision_recuse)
 
-        imgView.setImageURI(Uri.parse("http://127.0.0.1:8000/img/${path?.replace("\"", "")}"))
+        imgView.setImageURI(Uri.parse("http://18.221.41.112/img/${path?.replace("\"", "")}"))
 
         btnBack.setOnClickListener{
             val intent = Intent(this@Decision, Approve::class.java)
@@ -33,7 +33,7 @@ class Decision : AppCompatActivity() {
         }
 
         btnApprove.setOnClickListener{
-            val retrofitClient = NetworkUtils.getAPI("http://127.0.0.1:8000/api/")
+            val retrofitClient = NetworkUtils.getAPI("http://18.221.41.112/api/")
             val endpoint = retrofitClient.create(AutoUnion::class.java)
             val intent = Intent(this@Decision, Approve::class.java)
 
@@ -50,7 +50,7 @@ class Decision : AppCompatActivity() {
         }
 
         btnRecuse.setOnClickListener{
-            val retrofitClient = NetworkUtils.getAPI("http://127.0.0.1:8000/api/")
+            val retrofitClient = NetworkUtils.getAPI("http://18.221.41.112/api/")
             val endpoint = retrofitClient.create(AutoUnion::class.java)
             val intent = Intent(this@Decision, Approve::class.java)
 

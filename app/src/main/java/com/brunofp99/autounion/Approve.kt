@@ -30,7 +30,7 @@ class Approve : AppCompatActivity() {
     data class Profile(val id: String, val name: String, val path: String, val email: String)
 
     fun getProfiles(){
-        val retrofitClient = NetworkUtils.getAPI("http://127.0.0.1:8000/api/")
+        val retrofitClient = NetworkUtils.getAPI("http://18.221.41.112/api/")
         val endpoint = retrofitClient.create(AutoUnion::class.java)
 
         endpoint.getUnderAnalysis().enqueue(object : Callback<List<JsonObject>> {

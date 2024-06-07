@@ -17,12 +17,6 @@ android {
         versionName = "1.0.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        buildConfigField("String", "MAPS_API_KEY", "\"${project.properties["MAPS_API_KEY"]}\"")
-    }
-
-    applicationVariants.all {
-        val variant = this
-        variant.resValue("string", "maps_api_key", project.properties["MAPS_API_KEY"].toString())
     }
 
     buildTypes {
