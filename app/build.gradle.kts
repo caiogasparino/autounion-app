@@ -6,15 +6,15 @@ plugins {
 }
 
 android {
-    namespace = "com.brunofp99.autounion"
+    namespace = "com.autounion.app"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.brunofp99.autounion"
+        applicationId = "com.autounion.app"
         minSdk = 24
         targetSdk = 34
-        versionCode = 10
-        versionName = "1.0.0"
+        versionCode = 12
+        versionName = "2.0.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
